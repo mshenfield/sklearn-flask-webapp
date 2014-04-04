@@ -2,7 +2,7 @@ from flask import Flask, render_template, jsonify
 import pickle as pkl
 
 app = Flask(__name__)
-handwriting_model = pkl.load(open('data/handwriting_model_1.pkl','r'))
+handwriting_model = pkl.load(open('data/handwriting_model_2.pkl','r'))
 implicit_data_mapping = [
 'a', 'b', 'c', 'd',
 'e', 'f', 'g', 'h',
@@ -32,7 +32,7 @@ def predict(image_vector):
     """
     image_vector = map(lambda el: int(el), image_vector.split(","))
     prediction_index = handwriting_model.predict(image_vector)[0]
-    prediction = implicit_data_mapping[prediction_index - 1]
+    prediction = implicit_data_mapping[prediction_index];
     return jsonify(result=prediction)
 
 if __name__ == '__main__':

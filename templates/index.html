@@ -19,6 +19,12 @@
     #output {
       position: relative;
     }
+    #correct {
+      color : green;
+    }
+    #incorrect {
+      color: red;
+    }
   </style>
  </head>
 <body>
@@ -28,8 +34,8 @@
     <canvas id="paint"></canvas>
   </div>
   <button onclick="canvasToReducedVector()">Identify</button>
-  <input type='text' id='output'/>
-  <h4 id='result'></h4>
+  Target: <input type='text' id='target'/>
+  <h3 id='result'></h3>
   <script src="{{ url_for('static', filename='scripts/drawing_pad.js') }}"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   <script src="{{ url_for('static', filename='scripts/resize_image.js') }}"></script>

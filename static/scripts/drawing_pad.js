@@ -22,7 +22,7 @@ at http://codetheory.in/creating-a-paint-application-with-html5-canvas/
   }, false);
 
   /* Drawing on Paint App */
-  ctx.lineWidth = 5;
+  ctx.lineWidth = 15;
   ctx.lineJoin = 'round';
   ctx.lineCap = 'round';
   ctx.strokeStyle = 'black';
